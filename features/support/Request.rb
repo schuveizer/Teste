@@ -4,6 +4,8 @@ class Request
 
         p url
 
+        p "puts"
+
         payload = payload.to_json if payload
 
         res = nil
