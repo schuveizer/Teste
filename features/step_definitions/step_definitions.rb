@@ -1,57 +1,51 @@
-@values = 0
-@result
 
-@invalid_login_payload
-@headers
+@studentClasses = nil
+@studentClassId = nil
 
 
-Dado("que puts") do
-    p "puts"
-end
-  
-Quando("pegar {int}") do |num|
-    @values = num
+Quando("listar as salas") do
 
+    @studentClasses = Utils.new.req("get", "studentClass", "list?pageSize=900")
+   
 end
 
-Quando("somar com {int}") do |num|
-    @result = Utils.new.sum(@values, num)
+Então("todas precisam ter pelo menos uma matéria") do
+
+    StudentClass.new.validate_all_have_subject(@studentClasses)
+    
 end
 
-Então("tenho {int}") do |expected_result|
-    raise "Dafuk dude #{@result} nem é #{expected_result} tá fumando?" if @result != expected_result
-end
-  
+Quando("puxar cada sala pelo seu id") do
 
-Quando("bater no endpoint {string}") do |url|
-    Request.new.request("get", url)
-end
-  
-Então("devo estar no site da google") do
-    p "sucesso"
-end
-
-Quando("preencher meu payload de login invalido") do
- p "hue"
+    @studentClassId = StudentClass.new.class_id_pull_by_list(@studentClasses)
 
 end
-  
-Quando("executar login") do
-    binding.pry
-    threads = []
-
-    (0...100).each do
-        threads.push( Thread.new{
-        Request.new.request("get", "https://presencelist.herokuapp.com/user/list")
-        })
-    end
-
-    threads.each(&:join)
-
-end
-
-Então("Então devo receber uma resposta {int} erro") do |int|
-    pending # Write code here that turns the phrase above into concrete actions
-end
-  
  
+Então("As salas por id não terão diferença das da listagem") do
+
+    Utils.new.compare(@studentClasses["content"], @studentClassId)
+
+end
+  
+  
+Então("todas as materias precisam ter professores validos") do
+    # binding.pry
+    User.new.validateTeacher(@studentClasses)
+
+end
+  
+Quando("realiza um login como {string}") do |userType|
+
+    @login_response = User.new.executeLogin(userType)
+
+    # binding.pry
+
+end
+  
+  
+Entao("deve retornar as informações do usuario") do
+
+    raise "Usuário não encontrado" if !@login_response 
+        
+end
+  

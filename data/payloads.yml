@@ -2,4 +2,40 @@ login_netshoes:
   username: victor_rockall@hotmail.com
   password: paulinhopauzudopoa
   recaptchaResponse:
-  clipping: 589560dc2d3da286c03eeb594e8b3ae5b58107f7e0e323c0fbe8c1e673b24a070b033776ca368b0ccb730bc1366787cc5b44d1ea1406cab7c84d6104e45ed954
+  clipping: []
+
+user:
+  email: user
+  password: password
+  name: Bitu
+  userType: student
+  registration: 9999
+  qrCode:
+  presences: []
+  schedules: []
+
+login:
+  email: user
+  password: password
+
+studentClass:
+  name: "Mommy"
+  schoolSubjects: []
+
+schoolSubjects:
+  name: "Dont"
+  theme: 
+
+theme:
+  name: "Daddy"
+  teacherId: "teacher"
+  schedules: []
+  userIds: []
+
+login_aluno:
+  email: jaime_collins@bernier.info
+  password: eW9CYXlmYVc5R0FGMA==
+
+login_professor:
+  email: troy_kuhlman@stokesparisian.ca
+  password: NjZPMW5UMkww
