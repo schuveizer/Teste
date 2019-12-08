@@ -6,7 +6,7 @@ class Utils
 
         p url
 
-        p "puts"
+        # p "puts"
 
         payload = payload.to_json if payload
 
@@ -27,7 +27,7 @@ class Utils
         begin
             res = JSON.parse(res)
         rescue
-            puts "hold on, hanase"
+            puts "There was a problem with request"
         end
 
         p "Terminou"
@@ -38,7 +38,7 @@ class Utils
 
     def compare(el1, el2)
 
-        if el1 == el2
+        if el1. == el2
             p "Sucesso"
         else
             raise "Failure, #{el1} is diferent than #{el2}"

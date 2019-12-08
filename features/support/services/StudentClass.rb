@@ -1,14 +1,24 @@
 class StudentClass
 
-    def validate_all_have_subject(studentClasses)
+        #Pegar a listagem das salas
 
-        studentClasses["content"].each do |studentClass|
+    def getStudentClassList(page_size = 9999, page_number = 0)
+    
+        Utils.new.req("get", "studentClass", "list?pageSize#{page_size}&page+number=#{page_number}")["content"]
 
-            if studentClass["schoolSubjects"][0]
+    end
 
-                studentClass["schoolSubjects"].each do |schoolSubject|
+        #Valida se todas as salas possuem matéria
 
-                    p "#{studentClass["name"]} -> #{schoolSubject["name"]}}"
+    def validateAllHaveSubject(student_classes)
+
+        student_classes["content"].each do |student_class|
+
+            if student_class["schoolSubjects"][0]
+
+                student_class["schoolSubjects"].each do |school_subject|
+
+                    p "#{student_class["name"]} -> #{school_subject["name"]}}"
 
                 end
 
@@ -22,31 +32,33 @@ class StudentClass
 
     end
 
-    def class_id_pull_by_list(studentClasses)
+        #Puxar os ids das salas por thread e armazenar numa variavel ordenada
+   
+    def classIdPullByList(student_classes)
 
-        # return push each
+        # return push each thread
 
-        # threads = []
+        threads = []
 
-        studentClassesId = []
+        student_classes_id = []
 
-        studentClasses["content"].each do |studentClass|
+        student_classes["content"].each do |student_class|
             
-            # threads.push(Thread.new do 
+            threads.push(Thread.new do 
 
-                studentClassId = Utils.new.req("get", "studentClass", studentClass["_id"])
+                student_class_id = Utils.new.req("get", "studentClass", student_class["_id"])
 
-                studentClassesId.push(studentClassId)
+                student_classes_id.push(student_class_id)
                 
-            # end)
-           
+            end)
+
         end
         
-        # threads.each(&:join)
+        threads.each(&:join)
 
-        return studentClassesId
+        student_classes_id.sort! {|a , b|  a["_id"] <=> b["_id"]}
 
-            
+        return student_classes_id
 
     end
 

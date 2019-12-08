@@ -1,0 +1,480 @@
+[
+  {
+    "uri": "features/teste.feature",
+    "id": "testar-essa-merda",
+    "keyword": "Funcionalidade",
+    "name": "Testar essa merda",
+    "description": "",
+    "line": 4,
+    "comments": [
+      {
+        "value": "# encoding: UTF-8",
+        "line": 2
+      }
+    ],
+    "elements": [
+      {
+        "keyword": "Contexto",
+        "name": "Dar puts em puts",
+        "description": "",
+        "line": 6,
+        "type": "background",
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que puts",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/old_step.rb:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 39709
+            }
+          }
+        ]
+      },
+      {
+        "id": "testar-essa-merda;confirmar-se-todos-professores-dando-aula-são-professores",
+        "keyword": "Cenario",
+        "name": "Confirmar se todos professores dando aula são professores",
+        "description": "",
+        "line": 29,
+        "type": "scenario",
+        "comments": [
+          {
+            "value": "# Cenario: Somar 1 mais 3",
+            "line": 9
+          },
+          {
+            "value": "# Quando pegar 1",
+            "line": 10
+          },
+          {
+            "value": "# E somar com 3",
+            "line": 11
+          },
+          {
+            "value": "# Então tenho 4",
+            "line": 12
+          },
+          {
+            "value": "# Cenario: Somar 1 mais 2",
+            "line": 15
+          },
+          {
+            "value": "# Quando pegar 1",
+            "line": 16
+          },
+          {
+            "value": "# E somar com 2",
+            "line": 17
+          },
+          {
+            "value": "# Então tenho 3",
+            "line": 18
+          },
+          {
+            "value": "# Cenario: Pegar pagina principal google",
+            "line": 20
+          },
+          {
+            "value": "# Quando bater no endpoint \"https://www.google.com\"",
+            "line": 21
+          },
+          {
+            "value": "# Então devo estar no site da google",
+            "line": 22
+          },
+          {
+            "value": "# Cenario: Fazer login no netshoes",
+            "line": 24
+          },
+          {
+            "value": "# Quando preencher meu payload de login invalido",
+            "line": 25
+          },
+          {
+            "value": "# E executar login",
+            "line": 26
+          },
+          {
+            "value": "# Então Então devo receber uma resposta 401 erro",
+            "line": 27
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "name": "listar as salas",
+            "line": 30,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 718771886
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "todas as materias precisam ter professores validos",
+            "line": 31,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 702653996
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Contexto",
+        "name": "Dar puts em puts",
+        "description": "",
+        "line": 6,
+        "type": "background",
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que puts",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/old_step.rb:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 84957
+            }
+          }
+        ]
+      },
+      {
+        "id": "testar-essa-merda;confirmar-nomes-de-matéria",
+        "keyword": "Cenario",
+        "name": "Confirmar nomes de matéria",
+        "description": "",
+        "line": 33,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "name": "listar as salas",
+            "line": 34,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 615355749
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "todas precisam ter pelo menos uma matéria",
+            "line": 35,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:16"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "no implicit conversion of String into Integer (TypeError)\n./features/support/services/StudentClass.rb:15:in `[]'\n./features/support/services/StudentClass.rb:15:in `validateAllHaveSubject'\n./features/step_definitions/step_definitions.rb:18:in `\"todas precisam ter pelo menos uma matéria\"'\nfeatures/teste.feature:35:in `Então todas precisam ter pelo menos uma matéria'",
+              "duration": 105837
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Contexto",
+        "name": "Dar puts em puts",
+        "description": "",
+        "line": 6,
+        "type": "background",
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que puts",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/old_step.rb:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3933178
+            }
+          }
+        ]
+      },
+      {
+        "id": "testar-essa-merda;confirmar-busca-por-id-igual-a-listagem",
+        "keyword": "Cenario",
+        "name": "Confirmar busca por id igual a listagem",
+        "description": "",
+        "line": 37,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "name": "listar as salas",
+            "line": 38,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 613674592
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "puxar cada sala pelo seu id",
+            "line": 39,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:24"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "no implicit conversion of String into Integer (TypeError)\n./features/support/services/StudentClass.rb:45:in `[]'\n./features/support/services/StudentClass.rb:45:in `classIdPullByList'\n./features/step_definitions/step_definitions.rb:26:in `\"puxar cada sala pelo seu id\"'\nfeatures/teste.feature:39:in `E puxar cada sala pelo seu id'",
+              "duration": 94947
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "As salas por id não terão diferença das da listagem",
+            "line": 40,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:32"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Contexto",
+        "name": "Dar puts em puts",
+        "description": "",
+        "line": 6,
+        "type": "background",
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que puts",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/old_step.rb:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16209
+            }
+          }
+        ]
+      },
+      {
+        "id": "testar-essa-merda;fazer-login;;2",
+        "keyword": "Esquema do Cenario",
+        "name": "Fazer login",
+        "description": "",
+        "line": 48,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "name": "realiza um login como \"professor\"",
+            "line": 43,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:49"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 616936767
+            }
+          },
+          {
+            "keyword": "Entao ",
+            "name": "deve retornar as informações do usuario",
+            "line": 44,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:57"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "undefined method `[]' for nil:NilClass (NoMethodError)\n./features/step_definitions/step_definitions.rb:59:in `\"deve retornar as informações do usuario\"'\nfeatures/teste.feature:48:in `Entao deve retornar as informações do usuario'\nfeatures/teste.feature:44:in `Entao deve retornar as informações do usuario'",
+              "duration": 95327
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Contexto",
+        "name": "Dar puts em puts",
+        "description": "",
+        "line": 6,
+        "type": "background",
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que puts",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/old_step.rb:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 42738
+            }
+          }
+        ]
+      },
+      {
+        "id": "testar-essa-merda;fazer-login;;3",
+        "keyword": "Esquema do Cenario",
+        "name": "Fazer login",
+        "description": "",
+        "line": 49,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "name": "realiza um login como \"aluno\"",
+            "line": 43,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:49"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 610988472
+            }
+          },
+          {
+            "keyword": "Entao ",
+            "name": "deve retornar as informações do usuario",
+            "line": 44,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:57"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "undefined method `[]' for nil:NilClass (NoMethodError)\n./features/step_definitions/step_definitions.rb:59:in `\"deve retornar as informações do usuario\"'\nfeatures/teste.feature:49:in `Entao deve retornar as informações do usuario'\nfeatures/teste.feature:44:in `Entao deve retornar as informações do usuario'",
+              "duration": 95238
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Contexto",
+        "name": "Dar puts em puts",
+        "description": "",
+        "line": 6,
+        "type": "background",
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que puts",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/old_step.rb:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16770
+            }
+          }
+        ]
+      },
+      {
+        "id": "testar-essa-merda;confirmar-se-todos-os-professores-estão-dando-aula-na-máteria-certa",
+        "keyword": "Cenario",
+        "name": "Confirmar se todos os professores estão dando aula na máteria certa",
+        "description": "",
+        "line": 51,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "name": "listar as salas",
+            "line": 52,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 768003669
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "todas a materias tem seus recpectivos professores",
+            "line": 53,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:66"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 691301853
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Contexto",
+        "name": "Dar puts em puts",
+        "description": "",
+        "line": 6,
+        "type": "background",
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que puts",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/old_step.rb:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 28029
+            }
+          }
+        ]
+      },
+      {
+        "id": "testar-essa-merda;confirmar-se-todos-os-alunos-estão-nas-materias-certas",
+        "keyword": "Cenario",
+        "name": "Confirmar se todos os alunos estão nas materias certas",
+        "description": "",
+        "line": 55,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "name": "listar os alunos",
+            "line": 56,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:72"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4597826792
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "verificar as matérias que o aluno possui",
+            "line": 57,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:78"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 700662524
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

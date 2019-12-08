@@ -48,7 +48,10 @@ Exemplos:
 |professor  |
 |aluno      |
 
+Cenario: Confirmar se todos os professores estão dando aula na máteria certa
+Quando listar as salas
+Então todas a materias tem seus recpectivos professores
 
-
-
-
+Cenario: Confirmar se todos os alunos estão nas materias certas
+Quando listar os alunos
+Então verificar as matérias que o aluno possui
